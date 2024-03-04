@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    background-color: rgb(127, 129, 130);
+    overflow-x: hidden;
+    font-size: 16px; }
+
+p {
+    line-height: 1;
+}
+
+header {
+    background-color: black;
+    color: whitesmoke;
+    margin-left: flex;
+    margin-right: flex;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: none;
+    justify-content: center;
+    align-items: center;;
+}
+
+/* CSS for the link text */
+.overlay p {
+    color: white;
+    font-size: 20px;
+}
+
+/* CSS for the image container */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* CSS for the hover effect */
+.image-container:hover .overlay {
+    display: flex; /* Show the overlay on hover */
+}
+
+/* CSS to style the image */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Add the transition effect when the class is removed */
+.slide-in.loaded {
+    opacity: 1;
+    transform: translateX(0);
+}
+
